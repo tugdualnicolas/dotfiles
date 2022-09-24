@@ -533,7 +533,7 @@ class App {
     }
     # Required to install kpscript
     if (-not @(scoop bucket list).Contains("grigoryvp")) {
-      $uri = "https://github.com/grigoryvp/scoop-grigoryvp";
+      $uri = "https://github.com/tugdualnicolas/scoop-grigoryvp";
       scoop bucket add grigoryvp $uri;
       if ($LASTEXITCODE -ne 0) { throw "Failed" }
     }
