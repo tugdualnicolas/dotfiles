@@ -271,7 +271,7 @@ class App {
       $this._prompt("'$appName' corrupted, press any key to reinstall");
       scoop uninstall $appName;
     }
-    scoop install $appName;
+    scoop install -s $appName;
     if ($LASTEXITCODE -ne 0) { throw "Failed" }
   }
 
@@ -514,7 +514,7 @@ class App {
     scoop uninstall git;
     # Auto-installed with git
     scoop uninstall 7zip;
-    scoop install git;
+    scoop install -s git;
     if ($LASTEXITCODE -ne 0) { throw "Failed" }
   }
 
@@ -615,7 +615,7 @@ class App {
       # if install fails, scoop will treat app as installed.
       & scoop uninstall $appName;
     }
-    & sudo scoop install "$appName";
+    & sudo scoop install -s "$appName";
   }
 
 
